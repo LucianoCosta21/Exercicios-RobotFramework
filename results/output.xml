@@ -1,48 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-02-18T07:46:32.464881" rpa="true" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-02-18T08:40:49.874958" rpa="true" schemaversion="5">
 <suite id="s1" name="Exercícios" source="C:\Users\Luciano\Documents\IQS\Teste Automatizado\Exercícios">
-<suite id="s1-s1" name="Exercicio-16" source="C:\Users\Luciano\Documents\IQS\Teste Automatizado\Exercícios\exercicio-16.robot">
-<test id="s1-s1-t1" name="Categoria jogador" line="9">
-<if>
-<branch type="IF" condition="${IDADE} &gt;= 10 and ${IDADE} &lt;= 17">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nJogador: ${NOME} \nIdade: ${IDADE} \nCategorias de base!</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2025-02-18T07:46:32.502713" elapsed="0.000370"/>
+<suite id="s1-s1" name="Exercicio-17" source="C:\Users\Luciano\Documents\IQS\Teste Automatizado\Exercícios\exercicio-17.robot">
+<test id="s1-s1-t1" name="Calcular Porcetagem" line="11">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-02-18T08:40:49.939858" level="INFO">${total_pao_vendidos} = 60.0</msg>
+<var>${total_pao_vendidos}</var>
+<arg>${VENDA_PAO} * ${PAO}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-02-18T08:40:49.937850" elapsed="0.002620"/>
 </kw>
-<status status="NOT RUN" start="2025-02-18T07:46:32.501402" elapsed="0.001886"/>
-</branch>
-<branch type="ELSE IF" condition="${IDADE} &gt;= 18 and ${IDADE} &lt;= 40">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nJogador: ${NOME} \nIdade: ${IDADE} \nProfissional!</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-02-18T07:46:32.503996" elapsed="0.001245"/>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-02-18T08:40:49.942807" level="INFO">${total_broa_vendidos} = 275.0</msg>
+<var>${total_broa_vendidos}</var>
+<arg>${VENDA_BROA} * ${BROA}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-02-18T08:40:49.941666" elapsed="0.001600"/>
 </kw>
-<status status="PASS" start="2025-02-18T07:46:32.503382" elapsed="0.002079"/>
-</branch>
-<branch type="ELSE IF" condition="${IDADE} &gt; 40">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nJogador: ${NOME} \nIdade: ${IDADE} \nMaster!</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2025-02-18T07:46:32.505932" elapsed="0.000193"/>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-02-18T08:40:49.945391" level="INFO">${valor_guardar} = 33.5</msg>
+<var>${valor_guardar}</var>
+<arg>(${total_pao_vendidos} + ${total_broa_vendidos}) * ${PORCENTAGEM}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-02-18T08:40:49.944065" elapsed="0.002539"/>
 </kw>
-<status status="NOT RUN" start="2025-02-18T07:46:32.505550" elapsed="0.000684"/>
-</branch>
-<branch type="ELSE">
 <kw name="Log To Console" owner="BuiltIn">
-<arg>\nJogador: ${NOME} \nIdade: ${IDADE} \nEscolhinha</arg>
+<arg>\nValor a guardar em conta é: R$ ${valor_guardar}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2025-02-18T07:46:32.506531" elapsed="0.000200"/>
+<status status="PASS" start="2025-02-18T08:40:49.947481" elapsed="0.001439"/>
 </kw>
-<status status="NOT RUN" start="2025-02-18T07:46:32.506297" elapsed="0.000550"/>
-</branch>
-<status status="PASS" start="2025-02-18T07:46:32.501319" elapsed="0.005597"/>
-</if>
-<status status="PASS" start="2025-02-18T07:46:32.499966" elapsed="0.007419"/>
+<status status="PASS" start="2025-02-18T08:40:49.934984" elapsed="0.014407"/>
 </test>
-<status status="PASS" start="2025-02-18T07:46:32.495754" elapsed="0.015291"/>
+<status status="PASS" start="2025-02-18T08:40:49.927404" elapsed="0.024190"/>
 </suite>
-<status status="PASS" start="2025-02-18T07:46:32.470209" elapsed="0.042966"/>
+<status status="PASS" start="2025-02-18T08:40:49.882953" elapsed="0.072978"/>
 </suite>
 <statistics>
 <total>
@@ -52,7 +43,7 @@
 </tag>
 <suite>
 <stat name="Exercícios" id="s1" pass="1" fail="0" skip="0">Exercícios</stat>
-<stat name="Exercicio-16" id="s1-s1" pass="1" fail="0" skip="0">Exercícios.Exercicio-16</stat>
+<stat name="Exercicio-17" id="s1-s1" pass="1" fail="0" skip="0">Exercícios.Exercicio-17</stat>
 </suite>
 </statistics>
 <errors>

@@ -1,45 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-02-18T07:46:30.866693" rpa="true" schemaversion="5">
-<suite id="s1" name="Exercicio-16" source="c:\Users\Luciano\Documents\IQS\Teste Automatizado\Exercícios\exercicio-16.robot">
-<test id="s1-t1" name="Categoria jogador" line="9">
-<if>
-<branch type="IF" condition="${IDADE} &gt;= 10 and ${IDADE} &lt;= 17">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nJogador: ${NOME} \nIdade: ${IDADE} \nCategorias de base!</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2025-02-18T07:46:30.919443" elapsed="0.000580"/>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-02-18T08:40:48.073633" rpa="true" schemaversion="5">
+<suite id="s1" name="Exercicio-17" source="c:\Users\Luciano\Documents\IQS\Teste Automatizado\Exercícios\exercicio-17.robot">
+<test id="s1-t1" name="Calcular Porcetagem" line="11">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-02-18T08:40:48.126519" level="INFO">${total_pao_vendidos} = 60.0</msg>
+<var>${total_pao_vendidos}</var>
+<arg>${VENDA_PAO} * ${PAO}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-02-18T08:40:48.125789" elapsed="0.003766"/>
 </kw>
-<status status="NOT RUN" start="2025-02-18T07:46:30.917302" elapsed="0.003175"/>
-</branch>
-<branch type="ELSE IF" condition="${IDADE} &gt;= 18 and ${IDADE} &lt;= 40">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nJogador: ${NOME} \nIdade: ${IDADE} \nProfissional!</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-02-18T07:46:30.921705" elapsed="0.001640"/>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-02-18T08:40:48.131907" level="INFO">${total_broa_vendidos} = 275.0</msg>
+<var>${total_broa_vendidos}</var>
+<arg>${VENDA_BROA} * ${BROA}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-02-18T08:40:48.130399" elapsed="0.001942"/>
 </kw>
-<status status="PASS" start="2025-02-18T07:46:30.920870" elapsed="0.002846"/>
-</branch>
-<branch type="ELSE IF" condition="${IDADE} &gt; 40">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>\nJogador: ${NOME} \nIdade: ${IDADE} \nMaster!</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2025-02-18T07:46:30.924426" elapsed="0.000216"/>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-02-18T08:40:48.133646" level="INFO">${valor_guardar} = 33.5</msg>
+<var>${valor_guardar}</var>
+<arg>(${total_pao_vendidos} + ${total_broa_vendidos}) * ${PORCENTAGEM}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-02-18T08:40:48.133099" elapsed="0.000716"/>
 </kw>
-<status status="NOT RUN" start="2025-02-18T07:46:30.923962" elapsed="0.000902"/>
-</branch>
-<branch type="ELSE">
 <kw name="Log To Console" owner="BuiltIn">
-<arg>\nJogador: ${NOME} \nIdade: ${IDADE} \nEscolhinha</arg>
+<arg>\nValor a guardar em conta é: R$ ${valor_guardar}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2025-02-18T07:46:30.925324" elapsed="0.000172"/>
+<status status="PASS" start="2025-02-18T08:40:48.134490" elapsed="0.001415"/>
 </kw>
-<status status="NOT RUN" start="2025-02-18T07:46:30.925016" elapsed="0.000667"/>
-</branch>
-<status status="PASS" start="2025-02-18T07:46:30.917195" elapsed="0.008641"/>
-</if>
-<status status="PASS" start="2025-02-18T07:46:30.916392" elapsed="0.010245"/>
+<status status="PASS" start="2025-02-18T08:40:48.124397" elapsed="0.012786"/>
 </test>
-<status status="PASS" start="2025-02-18T07:46:30.875667" elapsed="0.054361"/>
+<status status="PASS" start="2025-02-18T08:40:48.085187" elapsed="0.054156"/>
 </suite>
 <statistics>
 <total>
@@ -48,7 +39,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="Exercicio-16" id="s1" pass="1" fail="0" skip="0">Exercicio-16</stat>
+<stat name="Exercicio-17" id="s1" pass="1" fail="0" skip="0">Exercicio-17</stat>
 </suite>
 </statistics>
 <errors>
