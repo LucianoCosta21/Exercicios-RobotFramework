@@ -5,7 +5,7 @@ ${PRECO_GASOLINA}    ${6.37}
 ${VALOR_COLOCADO}    ${58}
 
 *** Tasks ***
-Calcular Porcetagem
+Calcular Tanque Gasolina
     ${valor_gasto}    Evaluate    ${VALOR_COLOCADO} * ${PRECO_GASOLINA}
     ${tanque}    Evaluate    round(${valor_gasto} / ${PRECO_GASOLINA}, 2)
         Log To Console    \nO tanque deu: ${tanque}/l de gasolina!

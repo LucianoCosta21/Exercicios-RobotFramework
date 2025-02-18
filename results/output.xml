@@ -1,32 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-02-18T08:55:31.856455" rpa="true" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-02-18T09:39:29.893848" rpa="true" schemaversion="5">
 <suite id="s1" name="Exercícios" source="C:\Users\Luciano\Documents\IQS\Teste Automatizado\Exercícios">
-<suite id="s1-s1" name="Exercicio-18" source="C:\Users\Luciano\Documents\IQS\Teste Automatizado\Exercícios\exercicio-18.robot">
-<test id="s1-s1-t1" name="Calcular Porcetagem" line="8">
+<suite id="s1-s1" name="Exercicio-19" source="C:\Users\Luciano\Documents\IQS\Teste Automatizado\Exercícios\exercicio-19.robot">
+<test id="s1-s1-t1" name="Verificar numero par ou impar" line="7">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-02-18T08:55:31.894510" level="INFO">${valor_gasto} = 369.46</msg>
-<var>${valor_gasto}</var>
-<arg>${VALOR_COLOCADO} * ${PRECO_GASOLINA}</arg>
+<msg time="2025-02-18T09:39:29.934149" level="INFO">${verifica} = 1</msg>
+<var>${verifica}</var>
+<arg>${NUM} % 2</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-02-18T08:55:31.893665" elapsed="0.001177"/>
+<status status="PASS" start="2025-02-18T09:39:29.933140" elapsed="0.001326"/>
 </kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-02-18T08:55:31.896541" level="INFO">${tanque} = 58.0</msg>
-<var>${tanque}</var>
-<arg>round(${valor_gasto} / ${PRECO_GASOLINA}, 2)</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-02-18T08:55:31.895525" elapsed="0.001354"/>
-</kw>
+<if>
+<branch type="IF" condition="${verifica} == 0">
 <kw name="Log To Console" owner="BuiltIn">
-<arg>\nO tanque deu: ${tanque}/l de gasolina!</arg>
+<arg>\nO número ${NUM} é Par!</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-02-18T08:55:31.897662" elapsed="0.001091"/>
+<status status="NOT RUN" start="2025-02-18T09:39:29.935906" elapsed="0.000330"/>
 </kw>
-<status status="PASS" start="2025-02-18T08:55:31.891601" elapsed="0.007619"/>
+<status status="NOT RUN" start="2025-02-18T09:39:29.935121" elapsed="0.001306"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\nO número ${NUM} é Impar!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-18T09:39:29.937095" elapsed="0.001415"/>
+</kw>
+<status status="PASS" start="2025-02-18T09:39:29.936522" elapsed="0.002422"/>
+</branch>
+<status status="PASS" start="2025-02-18T09:39:29.935039" elapsed="0.004049"/>
+</if>
+<status status="PASS" start="2025-02-18T09:39:29.930835" elapsed="0.008724"/>
 </test>
-<status status="PASS" start="2025-02-18T08:55:31.887364" elapsed="0.013706"/>
+<status status="PASS" start="2025-02-18T09:39:29.926364" elapsed="0.016088"/>
 </suite>
-<status status="PASS" start="2025-02-18T08:55:31.862495" elapsed="0.040597"/>
+<status status="PASS" start="2025-02-18T09:39:29.899087" elapsed="0.045973"/>
 </suite>
 <statistics>
 <total>
@@ -36,7 +43,7 @@
 </tag>
 <suite>
 <stat name="Exercícios" id="s1" pass="1" fail="0" skip="0">Exercícios</stat>
-<stat name="Exercicio-18" id="s1-s1" pass="1" fail="0" skip="0">Exercícios.Exercicio-18</stat>
+<stat name="Exercicio-19" id="s1-s1" pass="1" fail="0" skip="0">Exercícios.Exercicio-19</stat>
 </suite>
 </statistics>
 <errors>
