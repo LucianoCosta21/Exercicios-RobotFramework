@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-02-17T23:49:05.736659" rpa="true" schemaversion="5">
+<suite id="s1" name="Exercicio-15" source="c:\Users\Luciano\Documents\IQS\Exercicios\exercicio-15.robot">
+<test id="s1-t1" name="Verificar fila" line="10">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-17T23:49:05.784077" level="INFO">${preferencial} = False</msg>
+<var>${preferencial}</var>
+<arg>${False}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-17T23:49:05.783450" elapsed="0.003638"/>
+</kw>
+<for flavor="IN">
+<iter>
+<if>
+<branch type="IF" condition="'${element}' == '${CONDICAO}'">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${preferencial}</var>
+<arg>${True}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2025-02-17T23:49:05.790969" elapsed="0.000307"/>
+</kw>
+<status status="NOT RUN" start="2025-02-17T23:49:05.789398" elapsed="0.002178"/>
+</branch>
+<status status="PASS" start="2025-02-17T23:49:05.789265" elapsed="0.002575"/>
+</if>
+<var name="${element}">Possui mais de 65 anos</var>
+<status status="PASS" start="2025-02-17T23:49:05.788789" elapsed="0.003102"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${element}' == '${CONDICAO}'">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${preferencial}</var>
+<arg>${True}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2025-02-17T23:49:05.792868" elapsed="0.000207"/>
+</kw>
+<status status="NOT RUN" start="2025-02-17T23:49:05.792392" elapsed="0.000839"/>
+</branch>
+<status status="PASS" start="2025-02-17T23:49:05.792358" elapsed="0.000986"/>
+</if>
+<var name="${element}">É deficiente físico</var>
+<status status="PASS" start="2025-02-17T23:49:05.792182" elapsed="0.001207"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${element}' == '${CONDICAO}'">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${preferencial}</var>
+<arg>${True}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2025-02-17T23:49:05.794170" elapsed="0.000098"/>
+</kw>
+<status status="NOT RUN" start="2025-02-17T23:49:05.793828" elapsed="0.000639"/>
+</branch>
+<status status="PASS" start="2025-02-17T23:49:05.793803" elapsed="0.010393"/>
+</if>
+<var name="${element}">É gestante</var>
+<status status="PASS" start="2025-02-17T23:49:05.793660" elapsed="0.010649"/>
+</iter>
+<var>${element}</var>
+<value>@{FILA_PREFERENCIAL}</value>
+<status status="PASS" start="2025-02-17T23:49:05.787875" elapsed="0.016748"/>
+</for>
+<if>
+<branch type="IF" condition="${preferencial} == ${True}">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\nFila preferencial!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-02-17T23:49:05.873164" elapsed="0.000314"/>
+</kw>
+<status status="NOT RUN" start="2025-02-17T23:49:05.872241" elapsed="0.001635"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\nFila Normal!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-17T23:49:05.874570" elapsed="0.001540"/>
+</kw>
+<status status="PASS" start="2025-02-17T23:49:05.874122" elapsed="0.002335"/>
+</branch>
+<status status="PASS" start="2025-02-17T23:49:05.872146" elapsed="0.004550"/>
+</if>
+<status status="PASS" start="2025-02-17T23:49:05.782115" elapsed="0.095103"/>
+</test>
+<status status="PASS" start="2025-02-17T23:49:05.746098" elapsed="0.132938"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Exercicio-15" id="s1" pass="1" fail="0" skip="0">Exercicio-15</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
