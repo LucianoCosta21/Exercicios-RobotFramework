@@ -1,92 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-02-17T23:49:07.466657" rpa="true" schemaversion="5">
-<suite id="s1" name="Exercicios" source="C:\Users\Luciano\Documents\IQS\Exercicios">
-<suite id="s1-s1" name="Exercicio-15" source="C:\Users\Luciano\Documents\IQS\Exercicios\exercicio-15.robot">
-<test id="s1-s1-t1" name="Verificar fila" line="10">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-02-17T23:49:07.505187" level="INFO">${preferencial} = False</msg>
-<var>${preferencial}</var>
-<arg>${False}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-02-17T23:49:07.504454" elapsed="0.001060"/>
-</kw>
-<for flavor="IN">
-<iter>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-02-18T07:46:32.464881" rpa="true" schemaversion="5">
+<suite id="s1" name="Exercícios" source="C:\Users\Luciano\Documents\IQS\Teste Automatizado\Exercícios">
+<suite id="s1-s1" name="Exercicio-16" source="C:\Users\Luciano\Documents\IQS\Teste Automatizado\Exercícios\exercicio-16.robot">
+<test id="s1-s1-t1" name="Categoria jogador" line="9">
 <if>
-<branch type="IF" condition="'${element}' == '${CONDICAO}'">
-<kw name="Set Variable" owner="BuiltIn">
-<var>${preferencial}</var>
-<arg>${True}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" start="2025-02-17T23:49:07.507920" elapsed="0.000307"/>
-</kw>
-<status status="NOT RUN" start="2025-02-17T23:49:07.507138" elapsed="0.001251"/>
-</branch>
-<status status="PASS" start="2025-02-17T23:49:07.507054" elapsed="0.001422"/>
-</if>
-<var name="${element}">Possui mais de 65 anos</var>
-<status status="PASS" start="2025-02-17T23:49:07.506617" elapsed="0.001911"/>
-</iter>
-<iter>
-<if>
-<branch type="IF" condition="'${element}' == '${CONDICAO}'">
-<kw name="Set Variable" owner="BuiltIn">
-<var>${preferencial}</var>
-<arg>${True}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" start="2025-02-17T23:49:07.509553" elapsed="0.000221"/>
-</kw>
-<status status="NOT RUN" start="2025-02-17T23:49:07.509039" elapsed="0.000878"/>
-</branch>
-<status status="PASS" start="2025-02-17T23:49:07.509001" elapsed="0.000994"/>
-</if>
-<var name="${element}">É deficiente físico</var>
-<status status="PASS" start="2025-02-17T23:49:07.508766" elapsed="0.001273"/>
-</iter>
-<iter>
-<if>
-<branch type="IF" condition="'${element}' == '${CONDICAO}'">
-<kw name="Set Variable" owner="BuiltIn">
-<var>${preferencial}</var>
-<arg>${True}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" start="2025-02-17T23:49:07.511092" elapsed="0.000202"/>
-</kw>
-<status status="NOT RUN" start="2025-02-17T23:49:07.510579" elapsed="0.000843"/>
-</branch>
-<status status="PASS" start="2025-02-17T23:49:07.510534" elapsed="0.000966"/>
-</if>
-<var name="${element}">É gestante</var>
-<status status="PASS" start="2025-02-17T23:49:07.510268" elapsed="0.001275"/>
-</iter>
-<var>${element}</var>
-<value>@{FILA_PREFERENCIAL}</value>
-<status status="PASS" start="2025-02-17T23:49:07.506009" elapsed="0.005613"/>
-</for>
-<if>
-<branch type="IF" condition="${preferencial} == ${True}">
+<branch type="IF" condition="${IDADE} &gt;= 10 and ${IDADE} &lt;= 17">
 <kw name="Log To Console" owner="BuiltIn">
-<arg>\nFila preferencial!</arg>
+<arg>\nJogador: ${NOME} \nIdade: ${IDADE} \nCategorias de base!</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2025-02-17T23:49:07.512486" elapsed="0.000199"/>
+<status status="NOT RUN" start="2025-02-18T07:46:32.502713" elapsed="0.000370"/>
 </kw>
-<status status="NOT RUN" start="2025-02-17T23:49:07.511961" elapsed="0.000854"/>
+<status status="NOT RUN" start="2025-02-18T07:46:32.501402" elapsed="0.001886"/>
+</branch>
+<branch type="ELSE IF" condition="${IDADE} &gt;= 18 and ${IDADE} &lt;= 40">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\nJogador: ${NOME} \nIdade: ${IDADE} \nProfissional!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-18T07:46:32.503996" elapsed="0.001245"/>
+</kw>
+<status status="PASS" start="2025-02-18T07:46:32.503382" elapsed="0.002079"/>
+</branch>
+<branch type="ELSE IF" condition="${IDADE} &gt; 40">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\nJogador: ${NOME} \nIdade: ${IDADE} \nMaster!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-02-18T07:46:32.505932" elapsed="0.000193"/>
+</kw>
+<status status="NOT RUN" start="2025-02-18T07:46:32.505550" elapsed="0.000684"/>
 </branch>
 <branch type="ELSE">
 <kw name="Log To Console" owner="BuiltIn">
-<arg>\nFila Normal!</arg>
+<arg>\nJogador: ${NOME} \nIdade: ${IDADE} \nEscolhinha</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-02-17T23:49:07.513144" elapsed="0.000835"/>
+<status status="NOT RUN" start="2025-02-18T07:46:32.506531" elapsed="0.000200"/>
 </kw>
-<status status="PASS" start="2025-02-17T23:49:07.512887" elapsed="0.001329"/>
+<status status="NOT RUN" start="2025-02-18T07:46:32.506297" elapsed="0.000550"/>
 </branch>
-<status status="PASS" start="2025-02-17T23:49:07.511927" elapsed="0.002380"/>
+<status status="PASS" start="2025-02-18T07:46:32.501319" elapsed="0.005597"/>
 </if>
-<status status="PASS" start="2025-02-17T23:49:07.502752" elapsed="0.011865"/>
+<status status="PASS" start="2025-02-18T07:46:32.499966" elapsed="0.007419"/>
 </test>
-<status status="PASS" start="2025-02-17T23:49:07.498587" elapsed="0.017932"/>
+<status status="PASS" start="2025-02-18T07:46:32.495754" elapsed="0.015291"/>
 </suite>
-<status status="PASS" start="2025-02-17T23:49:07.472003" elapsed="0.046949"/>
+<status status="PASS" start="2025-02-18T07:46:32.470209" elapsed="0.042966"/>
 </suite>
 <statistics>
 <total>
@@ -95,8 +51,8 @@
 <tag>
 </tag>
 <suite>
-<stat name="Exercicios" id="s1" pass="1" fail="0" skip="0">Exercicios</stat>
-<stat name="Exercicio-15" id="s1-s1" pass="1" fail="0" skip="0">Exercicios.Exercicio-15</stat>
+<stat name="Exercícios" id="s1" pass="1" fail="0" skip="0">Exercícios</stat>
+<stat name="Exercicio-16" id="s1-s1" pass="1" fail="0" skip="0">Exercícios.Exercicio-16</stat>
 </suite>
 </statistics>
 <errors>
