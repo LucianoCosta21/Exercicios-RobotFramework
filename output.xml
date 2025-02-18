@@ -1,36 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-02-18T08:40:48.073633" rpa="true" schemaversion="5">
-<suite id="s1" name="Exercicio-17" source="c:\Users\Luciano\Documents\IQS\Teste Automatizado\Exercícios\exercicio-17.robot">
-<test id="s1-t1" name="Calcular Porcetagem" line="11">
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-02-18T08:55:30.137523" rpa="true" schemaversion="5">
+<suite id="s1" name="Exercicio-18" source="c:\Users\Luciano\Documents\IQS\Teste Automatizado\Exercícios\exercicio-18.robot">
+<test id="s1-t1" name="Calcular Porcetagem" line="8">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-02-18T08:40:48.126519" level="INFO">${total_pao_vendidos} = 60.0</msg>
-<var>${total_pao_vendidos}</var>
-<arg>${VENDA_PAO} * ${PAO}</arg>
+<msg time="2025-02-18T08:55:30.195144" level="INFO">${valor_gasto} = 369.46</msg>
+<var>${valor_gasto}</var>
+<arg>${VALOR_COLOCADO} * ${PRECO_GASOLINA}</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-02-18T08:40:48.125789" elapsed="0.003766"/>
+<status status="PASS" start="2025-02-18T08:55:30.194309" elapsed="0.004621"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-02-18T08:40:48.131907" level="INFO">${total_broa_vendidos} = 275.0</msg>
-<var>${total_broa_vendidos}</var>
-<arg>${VENDA_BROA} * ${BROA}</arg>
+<msg time="2025-02-18T08:55:30.201097" level="INFO">${tanque} = 58.0</msg>
+<var>${tanque}</var>
+<arg>round(${valor_gasto} / ${PRECO_GASOLINA}, 2)</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-02-18T08:40:48.130399" elapsed="0.001942"/>
-</kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-02-18T08:40:48.133646" level="INFO">${valor_guardar} = 33.5</msg>
-<var>${valor_guardar}</var>
-<arg>(${total_pao_vendidos} + ${total_broa_vendidos}) * ${PORCENTAGEM}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-02-18T08:40:48.133099" elapsed="0.000716"/>
+<status status="PASS" start="2025-02-18T08:55:30.200009" elapsed="0.001501"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>\nValor a guardar em conta é: R$ ${valor_guardar}</arg>
+<arg>\nO tanque deu: ${tanque}/l de gasolina!</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-02-18T08:40:48.134490" elapsed="0.001415"/>
+<status status="PASS" start="2025-02-18T08:55:30.202356" elapsed="0.001321"/>
 </kw>
-<status status="PASS" start="2025-02-18T08:40:48.124397" elapsed="0.012786"/>
+<status status="PASS" start="2025-02-18T08:55:30.192501" elapsed="0.012097"/>
 </test>
-<status status="PASS" start="2025-02-18T08:40:48.085187" elapsed="0.054156"/>
+<status status="PASS" start="2025-02-18T08:55:30.146489" elapsed="0.065142"/>
 </suite>
 <statistics>
 <total>
@@ -39,7 +32,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="Exercicio-17" id="s1" pass="1" fail="0" skip="0">Exercicio-17</stat>
+<stat name="Exercicio-18" id="s1" pass="1" fail="0" skip="0">Exercicio-18</stat>
 </suite>
 </statistics>
 <errors>
